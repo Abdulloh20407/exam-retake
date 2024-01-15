@@ -1,28 +1,43 @@
 
 .hero {
-  padding: 233px 0 223px 13px;
+  padding: 133px 0 223px 13px;
   background-image: url("../../images/Background.png");
   background-repeat: no-repeat;
   background-size: 600px 555px;
-  background-position-x: right;
+  background-position-x: 490px;
   background-position-y: 109px;
 }
 .hero__content {
-  width: 458px;
+  width: 488px;
 }
 .hero__title-wrap {
-  width: 378px;
+  width: 383px;
   margin-bottom: 18px;
 }
 .hero__title {
-  @include textStyle($fontSize:40px, $fontWeight:700,);
+  @include textStyle($fontSize:50px, $fontWeight:700,);
+
   line-height: 60px; 
   margin: 0;
 }
+.hero__tittle-span{
+  color: var(--violet, #685ED6);
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 60px; /* 120% */
+}
 .hero__text {
-  @include textStyle($fontSize:18px);
+  @include textStyle($color:#1D2530, $fontSize:24px);
   line-height: 28px;
   margin-bottom: 45px;
+}
+.hero__text-span{
+  color: var(--violet, #685ED6);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 34px;
 }
 .hero__links{
  display: flex;
@@ -32,7 +47,11 @@
   @include link();
   padding: 15px 41px 14px;
   display: inline-block;
-  @include transition();
+  border-radius: 6px;
+  background: var(--violet, #685ED6);
+  
+  /* btn sdw */
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.07);
 
   &:hover{
     box-shadow: rgba(5, 12, 17, 0.3) 0px 1px 2px 0px, rgba(11, 16, 20, 0.652) 0px 2px 6px 2px;
@@ -81,7 +100,7 @@
 @media only screen and (max-width:768px){
   .hero{
     width: 100%;
-    padding: 640px 0 83px 0;
+    padding: 240px 0 83px 0;
     background-size: 400px 420px;
     text-align: center;
     background-position: center;
